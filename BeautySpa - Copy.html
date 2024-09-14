@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Spa</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+      h1 {
+        text-align: center;
+        color: steelblue;
+      }
+      h2 {
+        text-align: center;
+        color: steelblue;
+        border: 1px solid steelblue;
+        padding: 20px;
+        border-radius: 6px;
+        font-size: 35px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        max-width: 100%;
+      }
+      p {
+        line-height: 2;
+        font-size: 20px;
+        margin: 10px 5px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: steelblue;
+        color: bisque;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .benefits {
+        color: blueviolet;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .benefits:hover {
+        text-decoration: underline;
+      }
+      h4 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to</h1>
+    <h2>Sizophila's Beauty Spa</h2>
+    <img
+      src="https://thebeautyspa.com/wp-content/uploads/2020/06/nj-beauty-spa-covid-19-hours-left.jpg"
+    />
+    <p>
+      The Beauty Spa integrates medical science and beauty care to provide
+      services that surpass those found in conventional spas. Since the Beauty
+      Spa is associated with a dermatology practice and a plastic surgery
+      practice, our clients benefit from the latest developments in both fields.
+      Enjoy the serenity of a tranquil environment with soft, muted colors that
+      soothe and welcome you. Our goal is not to be the biggest, but the best.
+    </p>
+    <a
+      href="https://pureaestheticsgainesville.com/10-benefits-relaxing-spa-day-visit/"
+      class="benefits"
+      >Benefits of a spa day</a
+    >
+    <br />
+    <button>Book your session</button>
+    <h4>This page was built by Sizophila Ngcobo</h4>
+    <script>
+      function booking() {
+        let name = prompt("What is your name?");
+        let contact = prompt("What is your contact number?");
+        let service = prompt("What would you like to do?");
+        let time = prompt("What time will you come?");
+        if (time > 9 && time < 17) {
+          alert(
+            "Thank you" +
+              name +
+              ". We will contact you shortly about your booking!"
+          );
+        } else {
+          alert(
+            "Sorry" + name + ". We are not available. Try another time slot!"
+          );
+        }
+      }
+      let bookButton = document.querySelector("button");
+      bookButton.addEventListener("click", booking);
+    </script>
+  </body>
+</html>
